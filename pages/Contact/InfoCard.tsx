@@ -1,3 +1,4 @@
+import CONTACT from '@/constants/CONTACT';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default () => {
@@ -12,7 +13,7 @@ export default () => {
                         </div>
                         <div>
                             <p className="text-blue-200 text-sm">Téléphone</p>
-                            <p className="font-medium text-lg">+223 66 03 53 00</p>
+                            <p className="font-medium text-lg">{CONTACT.tel}</p>
                         </div>
                     </li>
                     <li className="flex items-start gap-4">
@@ -21,7 +22,7 @@ export default () => {
                         </div>
                         <div>
                             <p className="text-blue-200 text-sm">Email</p>
-                            <p className="font-medium text-lg">bore.younous59@gmail.com</p>
+                            <p className="font-medium text-lg">{CONTACT.email}</p>
                         </div>
                     </li>
                     <li className="flex items-start gap-4">
@@ -30,7 +31,7 @@ export default () => {
                         </div>
                         <div>
                             <p className="text-blue-200 text-sm">Adresse</p>
-                            <p className="font-medium text-lg">Bamako, Mali<br />Sotuba vers le Mali lait</p>
+                            <p className="font-medium text-lg">{CONTACT.location}</p>
                         </div>
                     </li>
                 </ul>

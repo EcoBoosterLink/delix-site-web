@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingBag } from 'lucide-react';
+import IMAGES from '@/constants/IMAGES';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,26 +23,20 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
             <Link to="/" className="flex items-center gap-2">
-              <div className="bg-primary p-2 rounded-lg">
-                <ShoppingBag className="text-white w-6 h-6" />
-              </div>
-              <span className="font-display font-bold text-2xl text-secondary">
-                Deli<span className="text-primary">x</span>
-              </span>
+              <img style={{ width: '80px' }} src={'/assets/images/logo.svg'} alt='Logo Delix' />
             </Link>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`font-display font-medium px-3 py-2 rounded-md transition-colors duration-200 ${
-                    isActive(link.path)
+                  className={`font-display font-medium px-3 py-2 rounded-md transition-colors duration-200 ${isActive(link.path)
                       ? 'text-primary'
                       : 'text-gray-600 hover:text-primary'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -51,7 +46,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
           </div>
-          
+
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={toggleMenu}
@@ -73,9 +68,8 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                   isActive(link.path) ? 'text-primary bg-orange-50' : 'text-gray-700 hover:text-primary hover:bg-gray-50'
-                }`}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive(link.path) ? 'text-primary bg-orange-50' : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                  }`}
               >
                 {link.name}
               </Link>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Mail, Phone } from 'lucide-react';
+import CONTACT from '@/constants/CONTACT';
 
 const Footer: React.FC = () => {
   return (
@@ -49,15 +50,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-blue-100">
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="text-primary mt-0.5" />
-                <span>123 Avenue de la Livraison,<br/>75000 Paris, France</span>
+                <span>{CONTACT.location}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={18} className="text-primary" />
-                <span>+33 1 23 45 67 89</span>
+                <span>{CONTACT.tel}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={18} className="text-primary" />
-                <span>support@delix.com</span>
+                <span>{CONTACT.email}</span>
               </li>
             </ul>
           </div>
