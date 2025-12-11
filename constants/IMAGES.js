@@ -1,6 +1,5 @@
-const PATH = '/assets/images';
+import logo from "@/assets/images/logo.svg"
 
 export default {
-    logoSVG: `${PATH}/logo.svg`,
-    logoJPG: `${PATH}/logo.jpg`,
+    logoSVG: logo,
 }
