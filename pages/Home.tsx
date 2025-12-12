@@ -94,7 +94,7 @@ const Home: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Placeholders for logos */}
             {['Sandwich +', 'Burger & Co', 'Shopreat', 'Azar Libre Service', 'Tonino Market'].map((name, index) => (
-              <span className="text-2xl font-bold font-display text-gray-400">{name}</span>
+              <span key={index} className="text-2xl font-bold font-display text-gray-400">{name}</span>
             ))}
           </div>
         </div>
